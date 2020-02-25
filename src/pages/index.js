@@ -1,11 +1,23 @@
 import React from "react"
+import "../styles/styles.scss"
+import 'bootstrap/dist/css/bootstrap.min.css'
+import {Layout} from '../components/Layout'
 
-export default () => (
-    <div>
-        Hello world!
-        <h1>Ok, let me to do this to try</h1>
-        <h2> can I add one more line</h2>
-        <h2> can I remove another line</h2>
-    </div>
-    
+//Import Components
+import Header from "../components/Header"
+import Banner from "../components/Banner"
+import Tabs from "../components/Tabs"
+import Button from 'react-bootstrap/Button'
+import Work from "../components/Work"
+
+const IndexPage = () => (
+    <Layout>
+        <Header />
+        <Banner />
+        <Work/>
+        {/* <Button>Test</Button> */}
+        {/* <Tabs /> */}
+    </Layout>
 )
+
+export default IndexPage
