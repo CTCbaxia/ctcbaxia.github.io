@@ -6,13 +6,13 @@ import styled from 'styled-components';
 
 const Styles = styled.div`
     /* .navbar{
-        background-color: white;
+        margin: 10px;
     } */
 
     .navbar-brand{
         text-transform: uppercase;
         letter-spacing: 1.2px;
-        font-size: 1.2rem;
+        font-size: 1.0rem;
         font-weight: 700;
         color: #303030;
         &:hover {
@@ -23,7 +23,7 @@ const Styles = styled.div`
     .nav-item{
         text-transform: uppercase;
         letter-spacing: 1.2px;
-        font-size: 0.8rem;
+        font-size: 0.6rem;
         color: #303030;
         .nav-link{
             &:hover {
@@ -31,11 +31,17 @@ const Styles = styled.div`
             }
         }
     }
-`
+    /* Remove toggler border */
+    .navbar-toggler{
+        border: 0;
+    }
+    
+`;
 const Header = () => (
     <Styles>
-        <Navbar>
+        <Navbar expand="sm" bg="white">
             <Navbar.Brand href="/">Tianchang</Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse>
                 <Nav className="ml-auto">
                     <Nav.Item><Nav.Link href="/about">About</Nav.Link></Nav.Item>
@@ -45,7 +51,7 @@ const Header = () => (
             </Navbar.Collapse>
         </Navbar>
     </Styles>
-)
+);
 
 export default Header;
 
